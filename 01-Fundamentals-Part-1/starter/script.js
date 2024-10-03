@@ -50,7 +50,7 @@ const birthYear = 2000;
 console.log(birthYear);
 birthYear = 2001;
 console.log(age);
-*/
+
 
 const now = 2037;
 const ageDaniel = now - 2000;
@@ -74,9 +74,26 @@ x--;
 console.log(x);
 
 // Comparison operators
-console.log(ageDaniel > ageSarah);
+console.log(ageDaniel > ageSarah); // >, <, >=, <=
 console.log(ageDaniel >= 37);
 
 const isFullAge = ageDaniel >= 37;
 
-console.log(isFullAge);
+console.log(now - 2000 > now - 1997);
+*/
+
+const now = 2037;
+const ageDaniel = now - 2000;
+const ageSarah = now - 1997;
+
+console.log(now - 2000 > now - 1997);
+
+console.log(25 - 10 - 5);
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge = (ageDaniel + ageSarah) / 2;
+
+console.log(ageDaniel, ageSarah, averageAge);
