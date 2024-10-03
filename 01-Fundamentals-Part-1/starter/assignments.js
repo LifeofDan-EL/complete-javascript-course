@@ -1,8 +1,5 @@
 /*
-LECTURE: Values and Variables
-1. Declare variables called 'country', 'continent' and 'population' and 
-assign their values according to your own country (population in millions)
-2. Log their values to the console
+LECTURE ASSIGNMENTS
 */
 
 const country = "Nigeria";
@@ -12,6 +9,7 @@ const isIsland = false;
 let language = "English";
 const finlandPopulation = 6000000;
 const averagePopulation = 33000000;
+let description;
 
 console.log(country);
 console.log(continent);
@@ -28,12 +26,16 @@ nigeriaPopulation++;
 console.log(nigeriaPopulation);
 console.log(nigeriaPopulation > finlandPopulation);
 console.log(nigeriaPopulation < averagePopulation);
-console.log(
-  country +
-    " is in " +
-    continent +
-    ", and its " +
-    nigeriaPopulation +
-    " people speak " +
-    language
-);
+
+description = `${country} is in ${continent}, and its ${nigeriaPopulation} people speak ${language}`;
+console.log(description);
+
+if (nigeriaPopulation > 33000000) {
+  console.log(`${country}'s population is above average`);
+} else {
+  console.log(
+    `${country}'s population is ${
+      averagePopulation - nigeriaPopulation
+    } below average`
+  );
+}

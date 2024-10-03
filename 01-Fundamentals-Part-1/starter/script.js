@@ -80,7 +80,7 @@ console.log(ageDaniel >= 37);
 const isFullAge = ageDaniel >= 37;
 
 console.log(now - 2000 > now - 1997);
-*/
+
 
 const now = 2037;
 const ageDaniel = now - 2000;
@@ -97,3 +97,49 @@ console.log(x, y);
 const averageAge = (ageDaniel + ageSarah) / 2;
 
 console.log(ageDaniel, ageSarah, averageAge);
+
+
+//template string
+const firstName = "Daniel";
+const job = "programmer";
+const birthYear = 2000;
+
+const daniel =
+  "I'm " + firstName + ", a " + (2024 - birthYear) + " years old " + job + "!";
+console.log(daniel);
+
+const danielNew = `I'm ${firstName}, a ${2024 - birthYear} years old ${job}!`;
+console.log(danielNew);
+
+console.log(`I am just a boy`);
+console.log(`String with \n\
+multiple \n\
+lines`);
+
+console.log(`String with
+multiple
+lines`);
+*/
+
+// Control flow
+const age = 12;
+
+if (age >= 18) {
+  console.log("Daniel can start driving lessons 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(
+    `Daniel is too young. Wait another ${yearsLeft} years to start driving lessons`
+  );
+}
+
+const birthYear = 2012;
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
