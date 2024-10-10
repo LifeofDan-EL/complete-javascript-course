@@ -17,7 +17,7 @@ function percentageOfWorld1(population) {
 //  Function Declarations vs. Expressions
 const population1 = percentageOfWorld1(200000000);
 const population2 = percentageOfWorld1(1441000000);
-const population3 = percentageOfWorld1(45000000);
+const population3 = percentageOfWorld1(54000000);
 
 console.log(population1, population2, population3);
 
@@ -27,7 +27,7 @@ const percentageOfWorld2 = function (population) {
 
 const population4 = percentageOfWorld2(200000000);
 const population5 = percentageOfWorld2(1441000000);
-const population6 = percentageOfWorld2(45000000);
+const population6 = percentageOfWorld2(54000000);
 
 console.log(population4, population5, population6);
 
@@ -35,7 +35,7 @@ console.log(population4, population5, population6);
 const percentageOfWorld3 = (population) => (population / 7900000000) * 100;
 const population7 = percentageOfWorld3(200000000);
 const population8 = percentageOfWorld3(1441000000);
-const population9 = percentageOfWorld3(45000000);
+const population9 = percentageOfWorld3(54000000);
 
 console.log(population7, population8, population9);
 
@@ -50,4 +50,16 @@ const describePopulation = (country, population) => {
 
 describePopulation("Nigeria", 200000000);
 describePopulation("China", 1441000000);
-describePopulation("Peace", 45000000);
+describePopulation("Kenya", 54000000);
+
+// Introduction to Array
+const populations = [200000000, 1441000000, 54000000, 33000000];
+console.log(populations.length == 4);
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+console.log(percentages);
