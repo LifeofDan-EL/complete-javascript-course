@@ -63,3 +63,23 @@ const percentages = [
   percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
+
+// Introduction to Objects
+const myCountry = {
+  country: "Nigeria",
+  capital: "Abuja",
+  language: "English",
+  population: 200000000,
+  neigbours: 4,
+};
+
+// Dot vs. Bracket Notation
+console.log(
+  `${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neigbours} neigbouring countries and a capital called ${myCountry.capital}`
+);
+
+myCountry.population = myCountry.population - 2000000;
+console.log(myCountry.population);
+
+myCountry["population"] = myCountry["population"] + 2000000;
+console.log(myCountry.population);

@@ -138,7 +138,7 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
-*/
+
 
 // Array methods
 const friends = ["Micheal", "Steven", "Peter"];
@@ -171,3 +171,83 @@ console.log(friends.includes(23));
 if (friends.includes("Steven")) {
   console.log("You have a friend called Steven");
 }
+
+
+// Dot vs. Bracket Notation
+const daniel = {
+  firstName: "Daniel",
+  lastName: "Anomfueme",
+  age: 2024 - 2000,
+  job: "Programmer",
+  friends: ["Philip", "Ben", "Izy"],
+};
+
+console.log(daniel);
+
+console.log(daniel.lastName);
+console.log(daniel["lastName"]);
+
+const nameKey = "Name";
+console.log(daniel["first" + nameKey]);
+console.log(daniel["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Daniel? Choose between firstName, lastName, age, job and friends"
+);
+if (daniel[interestedIn]) {
+  console.log(daniel[interestedIn]);
+} else {
+  console.log(
+    `Wrong request! Choose between firstName, lastName, age, job and friends`
+  );
+}
+
+// Add object
+daniel.location = "Port Harcourt";
+daniel["twitter"] = "@lifeofdanel";
+
+console.log(daniel);
+
+console.log(
+  `${daniel.firstName} has ${daniel.friends.length} friends, and his best friend is called ${daniel.friends[0]}`
+);
+
+
+
+const daniel = {
+  firstName: "Daniel",
+  lastName: "Anomfueme",
+  birthYear: 2000,
+  job: "Programmer",
+  friends: ["Philip", "Ben", "Izy"],
+  hasDriversLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   console.log(this)
+  //   return 2024 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    } and he ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+  },
+};
+
+console.log(daniel.calcAge());
+
+console.log(daniel.age);
+console.log(daniel.age);
+console.log(daniel.age);
+
+console.log(daniel.getSummary());
+
+*/
