@@ -250,4 +250,94 @@ console.log(daniel.age);
 
 console.log(daniel.getSummary());
 
+
+
+// For loop keeps running while condition is true
+for (let rep = 1; rep <= 20; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋🏾‍♂️`);
+}
+
+
+const daniel = [
+  "Daniel",
+  "Anomfueme",
+  2024 - 2000,
+  "Programmer",
+  ["Philip", "Ben", "Izy"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < daniel.length; i++) {
+  // Reading from Daniel array
+  console.log(daniel[i], typeof daniel[i]);
+
+  // Filling types array
+  // types[i] = typeof daniel[i];
+  types.push(typeof daniel[i]);
+}
+
+console.log(types);
+
+const ages = [];
+const years = [1991, 2007, 1969, 2020];
+for (let i = 0; i < years.length; i++) {
+  ages.push(2024 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log("--------ONLY STRINGS------");
+for (let i = 0; i < daniel.length; i++) {
+  if (typeof daniel[i] !== "string") continue;
+
+  console.log(daniel[i], typeof daniel[i]);
+}
+
+console.log("--------BREAK WITH NUMBER------");
+for (let i = 0; i < daniel.length; i++) {
+  if (typeof daniel[i] === "number") break;
+
+  console.log(daniel[i], typeof daniel[i]);
+}
+
+// Looping backwards
+const daniel = [
+  "Daniel",
+  "Anomfueme",
+  2024 - 2000,
+  "Programmer",
+  ["Philip", "Ben", "Izy"],
+  true,
+];
+
+// 4, 3, ...,0
+for (let i = daniel.length - 1; i >= 0; i--) {
+  console.log(i, daniel[i]);
+}
+
+// For loop keeps running while condition is true
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏾‍♂️`);
+  }
+}
+
+
+// While loop
+let rep = 1;
+while (rep <= 10) {
+  // console.log(`WHILE: Lifting weights repetition ${rep} 🏋🏾‍♂️`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end.....");
+}
 */

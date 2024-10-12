@@ -64,14 +64,29 @@ const percentages = [
 ];
 console.log(percentages);
 
-// Introduction to Objects
+// Introduction to Objects,Object Methods
 const myCountry = {
   country: "Nigeria",
   capital: "Abuja",
   language: "English",
   population: 200000000,
+  isIsland: true,
   neigbours: 4,
+  describe: function () {
+    return console.log(
+      `${this.country} has ${this.population} ${this.language}-speaking people, ${this.neigbours} neigbouring countries and a capital called ${this.capital}`
+    );
+  },
+  checkIsland: function () {
+    return this.neigbours
+      ? (myCountry.isIsland = true)
+      : (myCountry.isIsland = false);
+  },
 };
+
+myCountry.describe();
+console.log(myCountry);
+console.log(myCountry.checkIsland());
 
 // Dot vs. Bracket Notation
 console.log(
@@ -83,3 +98,35 @@ console.log(myCountry.population);
 
 myCountry["population"] = myCountry["population"] + 2000000;
 console.log(myCountry.population);
+
+for (voter = 1; voter <= 50; voter++) {
+  console.log(`Voter number ${voter} is currently voting`);
+}
+
+// Looping Arrays, Breaking and Continuing
+const populationss = [200000000, 1441000000, 54000000, 33000000];
+const percentages2 = [];
+for (let i = 0; i < populationss.length; i++) {
+  percentages2.push(percentageOfWorld1(populationss[i]));
+}
+console.log(percentages2);
+
+//Looping Backwards and Loops in Loops
+const listofNeigbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+for (let i = 0; i < listofNeigbours.length; i++) {
+  for (let k = 0; k < listofNeigbours[i].length; k++) {
+    console.log(`Neighbour: ${listofNeigbours[i][k]}`);
+  }
+}
+
+const percentages3 = [];
+let count = 0;
+while (count < populationss.length) {
+  percentages3.push(percentageOfWorld1(populationss[count]));
+  count++;
+}
+console.log(percentages3);
