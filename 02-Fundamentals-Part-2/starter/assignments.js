@@ -4,9 +4,9 @@ function describeCountry(country, population, capitalCity) {
   return `${country} has ${population} people and its capital city is ${capitalCity}`;
 }
 
-data1 = describeCountry("Nigeria", "200 million", "Abuja");
-data2 = describeCountry("Ghana", "33 million", "Accra");
-data3 = describeCountry("Kenya", "54 million", "Nairobi");
+data1 = describeCountry('Nigeria', '200 million', 'Abuja');
+data2 = describeCountry('Ghana', '33 million', 'Accra');
+data3 = describeCountry('Kenya', '54 million', 'Nairobi');
 
 console.log(data1, data2, data3);
 
@@ -32,7 +32,7 @@ const population6 = percentageOfWorld2(54000000);
 console.log(population4, population5, population6);
 
 //  Arrow Functions
-const percentageOfWorld3 = (population) => (population / 7900000000) * 100;
+const percentageOfWorld3 = population => (population / 7900000000) * 100;
 const population7 = percentageOfWorld3(200000000);
 const population8 = percentageOfWorld3(1441000000);
 const population9 = percentageOfWorld3(54000000);
@@ -48,9 +48,9 @@ const describePopulation = (country, population) => {
   );
 };
 
-describePopulation("Nigeria", 200000000);
-describePopulation("China", 1441000000);
-describePopulation("Kenya", 54000000);
+describePopulation('Nigeria', 200000000);
+describePopulation('China', 1441000000);
+describePopulation('Kenya', 54000000);
 
 // Introduction to Array
 const populations = [200000000, 1441000000, 54000000, 33000000];
@@ -66,9 +66,9 @@ console.log(percentages);
 
 // Introduction to Objects,Object Methods
 const myCountry = {
-  country: "Nigeria",
-  capital: "Abuja",
-  language: "English",
+  country: 'Nigeria',
+  capital: 'Abuja',
+  language: 'English',
   population: 200000000,
   isIsland: true,
   neigbours: 4,
@@ -96,7 +96,7 @@ console.log(
 myCountry.population = myCountry.population - 2000000;
 console.log(myCountry.population);
 
-myCountry["population"] = myCountry["population"] + 2000000;
+myCountry['population'] = myCountry['population'] + 2000000;
 console.log(myCountry.population);
 
 for (voter = 1; voter <= 50; voter++) {
@@ -113,9 +113,9 @@ console.log(percentages2);
 
 //Looping Backwards and Loops in Loops
 const listofNeigbours = [
-  ["Canada", "Mexico"],
-  ["Spain"],
-  ["Norway", "Sweden", "Russia"],
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia'],
 ];
 for (let i = 0; i < listofNeigbours.length; i++) {
   for (let k = 0; k < listofNeigbours[i].length; k++) {
