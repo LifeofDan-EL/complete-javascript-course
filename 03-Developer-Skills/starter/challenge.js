@@ -11,6 +11,7 @@ Test data:
 § Data 2: [12, 5, -5, 0, 4]
 GOOD LUCK 
 */
+
 const printForecast = function (arr) {
   let str = '"';
   for (i = 0; i < arr.length; i++) {
