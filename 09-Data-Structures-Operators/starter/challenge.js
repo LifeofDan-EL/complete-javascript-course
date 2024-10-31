@@ -124,7 +124,7 @@ Lewandowski: 2
 */
 // 1
 for (const [i, player] of game.scored.entries()) {
-  console.log(`Goal ${Number(i) + 1}: ${player}`);
+  // console.log(`Goal ${Number(i) + 1}: ${player}`);
 }
 
 //2
@@ -132,14 +132,14 @@ const odds = Object.values(game.odds);
 let average = 0;
 for (const odd of odds) average += odd;
 average /= odds.length;
-console.log(`The average is ${average}`);
+// console.log(`The average is ${average}`);
 
 //3
 
-console.log(Object.entries(game.odds));
+// console.log(Object.entries(game.odds));
 for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odd of ${teamStr}: ${odd}`);
+  // console.log(`Odd of ${teamStr}: ${odd}`);
 }
 
 // console.log(`Odd of draw: ${odds[1]}`);
@@ -150,7 +150,7 @@ for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 
-console.log(scorers);
+// console.log(scorers);
 
 /*
 Coding Challenge #3 
@@ -184,28 +184,73 @@ const gameEvents = new Map([
 
 //1
 const events = new Set([...gameEvents.values()]);
-console.log(events);
+// console.log(events);
 
 //2
 gameEvents.delete(64);
-console.log(gameEvents);
+// console.log(gameEvents);
 
 //3
 const time = [...gameEvents.keys()].pop();
-console.log(time);
+// console.log(time);
 
-console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
 
 //4
-for ([min, event] of gameEvents) {
-  const half = min < 45 ? `FIRST` : 'SECOND';
-  console.log(`[${half} HALF] ${min}:${event}`);
-}
+// for ([min, event] of gameEvents) {
+//   const half = min < 45 ? `FIRST` : 'SECOND';
+//   console.log(`[${half} HALF] ${min}:${event}`);
+// }
 
-// Convert map to array
-// console.log([...gameEvents]);
-// console.log([...gameEvents.entries()]);
-// console.log([...gameEvents.keys()]);
-// console.log(new Set([...gameEvents.values()]));
+// Coding Challenge #4
+
+/* 
+Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
+
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
+
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
+
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅
+
+HINT 1: Remember which character defines a new line in the textarea 😉
+HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
+HINT 3: Start without worrying about the ✅. Tackle that only after you have the variable name conversion working 😉
+HINT 4: This challenge is difficult on purpose, so start watching the solution in case you're stuck. Then pause and continue!
+
+Afterwards, test with your own test data!
+
+GOOD LUCK 😀
+*/
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+
+  const rows = text.split('\n');
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}✅${'✅'.repeat(i + 1)}`);
+  }
+});
+
+//Turn everything to lowercase (done)
